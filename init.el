@@ -58,4 +58,6 @@
 (load "ui.el")
 ;; editing.el contains configuration which makes editing easier
 (load "editing.el")
+;; setup-clojure.el contains clojure-specific settings for Emacs
+(load "setup-clojure.el")
     

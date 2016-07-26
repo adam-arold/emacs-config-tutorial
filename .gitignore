@@ -1,1 +1,5 @@
 /elpa
+.emacs.desktop
+.recentf
+.recentf~
+.smex-items

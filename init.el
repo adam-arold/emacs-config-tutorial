@@ -51,4 +51,7 @@
 ;; finally we add some directories which will contain our customizations of Emacs
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/vendor") 
+
+;; navigation.el contains configurations which will simplify Emacs navigation for you
+(load "navigation.el")
     

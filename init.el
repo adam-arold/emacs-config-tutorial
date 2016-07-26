@@ -11,3 +11,7 @@
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             
+;; then we trigger package initialization
+;; normally this would only be triggered after this init file is fully loaded
+(package-initialize)             

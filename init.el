@@ -10,7 +10,7 @@
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
              
 ;; then we trigger package initialization
 ;; normally this would only be triggered after this init file is fully loaded
@@ -56,4 +56,6 @@
 (load "navigation.el")
 ;; ui.el contains ui tweaks (including themes) which makes Emacs look much better
 (load "ui.el")
+;; editing.el contains configuration which makes editing easier
+(load "editing.el")
     

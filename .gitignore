@@ -1,5 +1,9 @@
-/elpa
+elpa/
 .emacs.desktop
 .recentf
 .recentf~
 .smex-items
+backups/
+auto-save-list/
+projectile-bookmarks.eld
+places

@@ -14,4 +14,11 @@
              
 ;; then we trigger package initialization
 ;; normally this would only be triggered after this init file is fully loaded
-(package-initialize)             
+(package-initialize) 
+
+;; we refresh the package archive
+;; this will create a a directory named "elpa" (if not present)
+;; and a directory named "archives" within it which will contain
+;; the package archive downloaded form the repositories above
+(when (not package-archive-contents)
+  (package-refresh-contents))            

@@ -21,4 +21,30 @@
 ;; and a directory named "archives" within it which will contain
 ;; the package archive downloaded form the repositories above
 (when (not package-archive-contents)
-  (package-refresh-contents))            
+  (package-refresh-contents))   
+  
+;; then we define a list of packages which are useful for Clojure
+;; development 
+(defvar my-packages
+  '(paredit                          ;; provides easy paren editing functionality
+    clojure-mode                     ;; emacs mode for Clojure development
+    clojure-mode-extra-font-locking  ;; provides syntax highlight for Clojure
+    cider                            ;; Clojure Interactive Development Environment that Rocks for Emacs
+    ido-ubiquitous                   ;; Fancy completion all over Emacs, not just for buffers and files.
+    smex                             ;; Built on top of Ido, it provides a convenient interface to your recently and most frequently used commands.
+    projectile                       ;; a project interaction library for Emacs
+    rainbow-delimiters               ;; provides rainbow-colored parentheses (eyecandy)
+    tagedit                          ;; A collection of paredit-like functions for editing in html-mode.
+    which-key                        ;; a minor mode for Emacs that displays the key bindings following your currently entered incomplete command
+    company                          ;; a text completion framework for Emacs
+    project-explorer                 ;; a project explorer sidebar
+    elscreen))                       ;; tabs for emacs
+    
+;; and install them all if they are not already installed
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))    
+;; if you see 
+;; "error: Trying to parse HTTP response code in odd buffer:  *http elpa.gnu.org:80*"
+;; at this point restart Emacs and it should go away.
+    

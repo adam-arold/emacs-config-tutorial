@@ -47,4 +47,8 @@
 ;; if you see 
 ;; "error: Trying to parse HTTP response code in odd buffer:  *http elpa.gnu.org:80*"
 ;; at this point restart Emacs and it should go away.
+
+;; finally we add some directories which will contain our customizations of Emacs
+(add-to-list 'load-path "~/.emacs.d/customizations")
+(add-to-list 'load-path "~/.emacs.d/vendor") 
     

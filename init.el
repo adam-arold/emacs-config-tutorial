@@ -54,4 +54,6 @@
 
 ;; navigation.el contains configurations which will simplify Emacs navigation for you
 (load "navigation.el")
+;; ui.el contains ui tweaks (including themes) which makes Emacs look much better
+(load "ui.el")
     
